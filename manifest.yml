@@ -1,9 +1,8 @@
 ---
 applications:
-  - name: pal-tracker-sudha
-    instances: 1
-    memory: 1G
-    disk_quota: 512M
-    path: build/libs/pal-tracker.jar
-    buildpacks:
-      - java_buildpack
+- name: pal-tracker
+  path: build/libs/pal-tracker.jar
+  random-route: true
+  env:
+    WELCOME_MESSAGE: Hello from Cloud Foundry
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
