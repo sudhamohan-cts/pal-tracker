@@ -8,5 +8,5 @@ public interface TimeEntryRepository {
     public TimeEntry find(Long id);
     public List<TimeEntry> list();
     public TimeEntry update(Long id, TimeEntry timeEntry);
-    public TimeEntry delete(Long id);
+    public void delete(Long id);
 }
